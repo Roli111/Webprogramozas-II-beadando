@@ -26,7 +26,7 @@ class MessageController extends Controller
     /**
      * Új üzenet mentése
      */
-    public function store(Request $request)
+    /*public function store(Request $request)
     {
         // Validáció
         $request->validate([
@@ -43,5 +43,5 @@ class MessageController extends Controller
         ]);
 
         return back()->with('success', 'Üzenet elküldve!');
-    }
+    }*/
 }

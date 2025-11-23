@@ -6,7 +6,13 @@
     <h2>Ezt csak akkor láthatod, ha admin vagy :)</h2>
     <h1>Regisztrált felhasználók:</h1>
     @foreach($users as $user)
-        <p>{{ $user->name }} - {{ $user->email }} - {{ $user->role }}</p>
+        <p>{{ $user->name }} - {{ $user->email }} - 
+            @if( $user->role ==1) 
+                Admin 
+            @else    
+                Felhasználó
+            @endif
+        </p>
     @endforeach
 @else
     <h2>Nincs jogosultságod az oldal megtekintéséhez.</h2>
